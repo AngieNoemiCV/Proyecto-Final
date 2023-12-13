@@ -1,10 +1,18 @@
+# Proyecto
+En esta actividad  objetivo es organizar la base de datos de nuestro proyecto, en mi caso un sitio web, de desafios matematicos para niños de 6 a 12 años de edad. 
+
+En este readme esta redactado todo lo que necesitamos para iniciar y desarrollar la actividad.
+
+
 # API RESTful con Node.js
 
-Proyecto de demostración para clases de desarrollo de APIs utilizando Node.js,
+Proyecto de la meteria de especialidad "ARQUITECTURAS Y SERVICIOS WEB AVANZADOS"  utilizando Node.js,
 con implementación en contenedores de Docker.
+
 
 ## Tabla de contenido
 
+- [Proyecto](#proyecto)
 - [API RESTful con Node.js](#api-restful-con-nodejs)
   - [Tabla de contenido](#tabla-de-contenido)
   - [Requisitos de instalación](#requisitos-de-instalación)
@@ -23,7 +31,7 @@ Asegúrate de tener instalado y configurado Docker antes de comenzar.
 1. Clonar el repositorio en la máquina local:
    
    ```sh
-   git clone https://github.com/francerz/node-restful.git
+   git clone https://github.com/AngieNoemiCV/Proyecto-Final
    ```
 
 2. Navegar al directorio del proyecto:
