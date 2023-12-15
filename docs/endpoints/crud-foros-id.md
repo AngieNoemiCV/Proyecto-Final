@@ -1,6 +1,6 @@
-# Endpoint: `GET /foros/{id}`
+# Endpoint: `foros/{id}`
 
-Permite obtener información detallada sobre un foro específico mediante su identificador único.
+Permite obtener información detallada sobre un foro específico mediante su identificador único. En donde se estaran registrando los datos del id_foro, descripcion, titulo y fecha_creacion.
 
 ## Parámetros de URL
 - `{id}` (obligatorio): Identificador único del foro que se desea recuperar.
@@ -48,15 +48,21 @@ PATCH/foros/1
 
 Content-Type: application/json
 {
-  "titulo": "Dividir jugando",
+  "id_foro": 1,
+  "descripcion": "Foro de Nivel 2",
+  "titulo": "Sumar y Restar",
+  "fecha_creacion": "2023-01-01T00:00:00.000Z"
 }
 ```
 
 ## Respuesta Exitosa (Código 200 OK)
 ```json
 {
-    "status": 201,
-    "message": "Successfull partial update"
+    "id_foro": 1,
+    "descripcion": "Foro de Nivel 2",
+    "titulo": "Sumar y Restar",
+    "fecha_creacion": "2023-01-01T00:00:00.000Z"
+
 }
 ```
 
@@ -86,15 +92,21 @@ POST/foros
 
 Content-Type: application/json
 {
-  "titulo": "Aprendamos bien",
+  "id_foro": 6,
+  "descripcion": "Foro de dividir",
+  "titulo": "Cual es el cociente?",
+  "fecha_creacion": "2023-01-01T00:00:00.000Z"
+
 }
 ```
 
 ## Respuesta Exitosa (Código 200 OK)
 ```json
 {
-    "status": 201,
-    "message": "Created"
+  "id_foro": 6,
+  "descripcion": "Foro de dividir",
+  "titulo": "Cual es el cociente?",
+  "fecha_creacion": "2023-01-01T00:00:00.000Z"
 }
 ```
 
@@ -113,19 +125,25 @@ Content-Type: application/json
 Permite reemplazar un foro.
 
 ```http
-PUT/foros
+PUT/foros/1
 
 Content-Type: application/json
 {
-  "titulo": "matematicaas",
+    "id_foro": 3,
+    "descripcion": "Foro de Nivel 2",
+    "titulo": "Sumar y Restar",
+    "fecha_creacion": "2023-01-01T00:00:00.000Z"
 }
 ```
 
 ## Respuesta Exitosa (Código 200 OK)
 ```json
 {
-    "status": 201,
-    "message": "Updated successfully"
+    "id_foro": 3,
+    "descripcion": "Foro de Nivel 2",
+    "titulo": "Sumar y Restar",
+    "fecha_creacion": "2023-01-01T00:00:00.000Z"
+
 }
 ```
 

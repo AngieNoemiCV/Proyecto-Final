@@ -1,6 +1,6 @@
-# Endpoint: `GET /respuestas/{id}`
+# Endpoint: `respuestas/{id}`
 
-Permite obtener información detallada sobre una respuestas específico mediante su identificador único.
+Permite obtener información detallada sobre una respuestas específico mediante su identificador único. En donde se estaran registrando los datos del id_respuesta, desafio_id, usuario_id, respuesta y fecha_envio.
 
 ## Parámetros de URL
 - `{id}` (obligatorio): Identificador único de la respuesta que se desea recuperar.
@@ -49,15 +49,23 @@ PATCH/respuestas_usuario_des/1
 
 Content-Type: application/json
 {
-  "respuesta": "Conté 9 pelotas",
+"id_respuesta": 1,
+"desafio_id": 1,
+"usuario_id": 1,
+"respuesta": "Conté 15 patas en total.",
+"fecha_envio": "2023-01-02T00:00:00.000Z"
+
 }
 ```
 
 ## Respuesta Exitosa (Código 200 OK)
 ```json
 {
-    "status": 201,
-    "message": "Successfull partial update"
+    "id_respuesta": 1,
+    "desafio_id": 1,
+    "usuario_id": 1,
+    "respuesta": "Conté 15 patas en total.",
+    "fecha_envio": "2023-01-02T00:00:00.000Z"
 }
 ```
 
@@ -87,15 +95,22 @@ POST/respuestas_usuario_des
 
 Content-Type: application/json
 {
-  "respuesta": "SI",
+"id_respuesta": 8,
+"desafio_id": 5,
+"usuario_id": 2,
+"respuesta": "Obtuve 18 como respuesta en mi desafio de division.",
+"fecha_envio": "2023-01-02T00:00:00.000Z"
 }
 ```
 
 ## Respuesta Exitosa (Código 200 OK)
 ```json
 {
-    "status": 201,
-    "message": "Created"
+    "id_respuesta": 8,
+    "desafio_id": 5,
+    "usuario_id": 2,
+    "respuesta": "Obtuve 18 como respuesta en mi desafio de division.",
+    "fecha_envio": "2023-01-02T00:00:00.000Z"
 }
 ```
 
@@ -118,15 +133,22 @@ PUT/respuestas_usuario_des
 
 Content-Type: application/json
 {
-  "respuesta": "Conto 10 bolitas",
+"id_respuesta": 8,
+"desafio_id": 5,
+"usuario_id": 2,
+"respuesta": "Obtuve 28 como respuesta en mi desafio de division.",
+"fecha_envio": "2023-01-02T00:00:00.000Z"
 }
 ```
 
 ## Respuesta Exitosa (Código 200 OK)
 ```json
 {
-    "status": 201,
-    "message": "Updated successfully"
+    "id_respuesta": 8,
+    "desafio_id": 5,
+    "usuario_id": 2,
+    "respuesta": "Obtuve 28 como respuesta en mi desafio de division.",
+    "fecha_envio": "2023-01-02T00:00:00.000Z"
 }
 ```
 

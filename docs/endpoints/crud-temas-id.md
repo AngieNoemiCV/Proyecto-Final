@@ -1,6 +1,6 @@
-# Endpoint: `GET /temas/{id}`
+# Endpoint: `temas/{id}`
 
-Permite obtener información detallada sobre un tema específico mediante su identificador único.
+Permite obtener información detallada sobre un tema específico mediante su identificador único. En donde se estaran registrando los datos del id_tema, tema_id, titulo, descripcion y fecha_creacion.
 
 ## Parámetros de URL
 - `{id}` (obligatorio): Identificador único del tema que se desea recuperar.
@@ -49,15 +49,22 @@ PATCH/temas/1
 
 Content-Type: application/json
 {
-  "descripcion": "Cuenta cuentas patas hay",
+"id_tema": 1,
+"tema_id": 1,
+"titulo": "Sumas",
+"descripcion": "Realiza las sumas ",
+"fecha_creacion": "2023-01-02T00:00:00.000Z"
 }
 ```
 
 ## Respuesta Exitosa (Código 200 OK)
 ```json
 {
-    "status": 201,
-    "message": "Successfull partial update"
+    "id_tema": 1,
+    "tema_id": 1,
+    "titulo": "Sumas",
+    "descripcion": "Realiza las sumas ",
+    "fecha_creacion": "2023-01-02T00:00:00.000Z"
 }
 ```
 
@@ -87,15 +94,22 @@ POST/temas
 
 Content-Type: application/json
 {
-  "descripcion": "Con cuantas pelotas juega el León?",
+"id_tema": 6,
+"tema_id": 5,
+"titulo": "Dividiendo aprendemos",
+"descripcion": "Realiza las divisiones ",
+"fecha_creacion": "2023-01-02T00:00:00.000Z"
 }
 ```
 
 ## Respuesta Exitosa (Código 200 OK)
 ```json
 {
-    "status": 201,
-    "message": "Created"
+    "id_tema": 6,
+    "tema_id": 5,
+    "titulo": "Dividiendo aprendemos",
+    "descripcion": "Realiza las divisiones ",
+    "fecha_creacion": "2023-01-02T00:00:00.000Z"
 }
 ```
 
@@ -118,15 +132,22 @@ PUT/temas
 
 Content-Type: application/json
 {
-  "descripcion": "Cuenta cuantos cuentos tiene el niño",
+"id_tema": 6,
+"tema_id": 3,
+"titulo": "Dividiendo aprendemos",
+"descripcion": "Realiza las divisiones ",
+"fecha_creacion": "2023-01-02T00:00:00.000Z"
 }
 ```
 
 ## Respuesta Exitosa (Código 200 OK)
 ```json
 {
-    "status": 201,
-    "message": "Updated successfully"
+    "id_tema": 6,
+    "tema_id": 3,
+    "titulo": "Dividiendo aprendemos",
+    "descripcion": "Realiza las divisiones ",
+    "fecha_creacion": "2023-01-02T00:00:00.000Z"
 }
 ```
 

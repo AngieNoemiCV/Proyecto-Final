@@ -1,6 +1,6 @@
-# Endpoint: `GET/desafios/{id}`
+# Endpoint: `desafios/{id}`
 
-Permite obtener información detallada sobre un desafio específico mediante su identificador único.
+Permite obtener información detallada sobre un desafio específico mediante su identificador único.  En donde se estaran registrando los datos del id_desafio, titulo, descripcion, nivel, tema e imagen.
 
 ## Parámetros de URL
 - `{id}` (obligatorio): Identificador único del desafio que se desea recuperar.
@@ -46,19 +46,29 @@ GET/desafios/1
 
 Permite reemplazar un dato de un desafio.
 ```http
-PATCH/desafios/1
+PATCH/desafios/2
 
 Content-Type: application/json
 {
-  "descripcion": "Juega y aprende",
+  
+"id_desafio": 2,
+"titulo": "Rompecabezas Matemático",
+"descripcion": "Encuentra el camino correcto sumando y restando números en el Rompecabezas.",
+"nivel": 6,
+"tema": "Aritmética",
+"imagen": ""
 }
 ```
 
 ## Respuesta Exitosa (Código 200 OK)
 ```json
 {
-    "status": 201,
-    "message": "Successfull partial update"
+    "id_desafio": 2,
+    "titulo": "Rompecabezas Matemático",
+    "descripcion": "Encuentra el camino correcto sumando y restando números en el Rompecabezas.",
+    "nivel": 6,
+    "tema": "Aritmética",
+    "imagen": ""
 }
 ```
 
@@ -88,15 +98,25 @@ POST/desafios
 
 Content-Type: application/json
 {
-  "descripcion": "Aprendemos contando",
+  
+"id_desafio": 7,
+"titulo": "Juegos Matemático",
+"descripcion": "Encuentra el camino correcto multiplicando y restando números en el laberinto.",
+"nivel": 6,
+"tema": "Aritmética",
+"imagen": "",
 }
 ```
 
 ## Respuesta Exitosa (Código 200 OK)
 ```json
 {
-    "status": 201,
-    "message": "Created"
+    "id_desafio": 7,
+    "titulo": "Juegos Matemático",
+    "descripcion": "Encuentra el camino correcto multiplicando y restando números en el laberinto.",
+    "nivel": 6,
+    "tema": "Aritmética",
+    "imagen": "",
 }
 ```
 
@@ -119,15 +139,24 @@ PUT/desafios
 
 Content-Type: application/json
 {
-  "descripcion": "cuenta numeritos",
+  "id_desafio": 5,
+"titulo": "Laberinto Matemático",
+"descripcion": "Encuentra el camino correcto sumando y restando números en el laberinto.",
+"nivel": 6,
+"tema": "Aritmética",
+"imagen": ""
 }
 ```
 
 ## Respuesta Exitosa (Código 200 OK)
 ```json
 {
-    "status": 201,
-    "message": "Updated successfully"
+    "id_desafio": 5,
+    "titulo": "Laberinto Matemático",
+    "descripcion": "Encuentra el camino correcto sumando y restando números en el laberinto.",
+    "nivel": 6,
+    "tema": "Aritmética",
+    "imagen": ""
 }
 ```
 

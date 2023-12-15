@@ -1,6 +1,7 @@
-# Endpoint: `GET /publicaciones/{id}`
+# Endpoint: `publicaciones/{id}`
 
-Permite obtener información detallada sobre una publicacion específico mediante su identificador único.
+Permite obtener información detallada sobre una publicacion específico mediante su identificador único. En donde se estaran registrando los datos del id_publicacion, tema_id, usuario_id, contenido y fecha_creacion.
+
 
 ## Parámetros de URL
 - `{id}` (obligatorio): Identificador único de la publicacion que se desea recuperar.
@@ -49,15 +50,24 @@ PATCH/publicaciones/1
 
 Content-Type: application/json
 {
-  "contenido": "Hola prendi mucho aqui",
+"id_publicacion": 9,
+"tema_id": 1,
+"usuario_id": 1,
+"contenido": "¡Hola a todos! Hoy resolví un desafío de división. ¿Alguien más lo intentó?",
+"fecha_creacion": "2023-12-02 T00:00:00.000Z"
+
 }
 ```
 
 ## Respuesta Exitosa (Código 200 OK)
 ```json
 {
-    "status": 201,
-    "message": "Successfull partial update"
+    "id_publicacion": 9,
+    "tema_id": 1,
+    "usuario_id": 1,
+    "contenido": "¡Hola a todos! Hoy resolví un desafío de división. ¿Alguien más lo intentó?",
+    "fecha_creacion": "2023-12-02 T00:00:00.000Z"
+
 }
 ```
 
@@ -87,15 +97,23 @@ POST/publicaciones
 
 Content-Type: application/json
 {
-  "contenido": "Aprendi bien",
+"id_publicacion": 9,
+"tema_id": 1,
+"usuario_id": 1,
+"contenido": "¡Hola a todos! Hoy resolví un desafío de división. ¿Alguien más lo intentó?",
+"fecha_creacion": "2023-12-02 T00:00:00.000Z"
+
 }
 ```
 
 ## Respuesta Exitosa (Código 200 OK)
 ```json
 {
-    "status": 201,
-    "message": "Created"
+    "id_publicacion": 15,
+    "tema_id": 5,
+    "usuario_id": 5,
+    "contenido": "¡Hola a todos! Hoy resolví un desafío de rompecabezas sumando. ¿Alguien más lo intentó?",
+    "fecha_creacion": "2023-01-02 T00:00:00.000Z"
 }
 ```
 
@@ -118,15 +136,22 @@ PUT/publicaciones
 
 Content-Type: application/json
 {
-  "contenido": "Me gusto mucho",
+    "id_publicacion": 5,
+    "tema_id": 1,
+    "usuario_id": 1,
+    "contenido": "¡Hola a todos! Hoy resolví un desafío de división. ¿Alguien más lo intentó?",
+    "fecha_creacion": "2023-12-02 T00:00:00.000Z"
 }
 ```
 
 ## Respuesta Exitosa (Código 200 OK)
 ```json
 {
-    "status": 201,
-    "message": "Updated successfully"
+    "id_publicacion": 5,
+    "tema_id": 1,
+    "usuario_id": 1,
+    "contenido": "¡Hola a todos! Hoy resolví un desafío de división. ¿Alguien más lo intentó?",
+    "fecha_creacion": "2023-12-02 T00:00:00.000Z"
 }
 ```
 

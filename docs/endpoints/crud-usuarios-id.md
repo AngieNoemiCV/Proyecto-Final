@@ -1,6 +1,6 @@
-# Endpoint: `GET /usuarios/{id}`
+# Endpoint: `usuarios/{id}`
 
-Permite obtener información detallada sobre un usuarios específico mediante su identificador único.
+Permite obtener información detallada sobre un usuarios específico mediante su identificador único. En donde se estaran registrando los datos del id_usuario, nombre, email, contraseña, tipo_usuario y fecha_creacion.
 
 ## Parámetros de URL
 - `{id}` (obligatorio): Identificador único del usuarios que se desea recuperar.
@@ -50,15 +50,25 @@ PATCH/usuarios/1
 
 Content-Type: application/json
 {
-  "nombre": "Juan Lopez",
+"id_usuario": 1,
+"nombre": "Ana García",
+"email": "anaG.garcia@gmail.com",
+"contraseña": "GarciAna123",
+"tipo_usuario": "Estudiante",
+"fecha_creacion": "2023-01-01T00:00:00.000Z"
 }
 ```
 
 ## Respuesta Exitosa (Código 200 OK)
 ```json
 {
-    "status": 201,
-    "message": "Successfull partial update"
+    "id_usuario": 1,
+    "nombre": "Ana García",
+    "email": "anaG.garcia@gmail.com",
+    "contraseña": "GarciAna123",
+    "tipo_usuario": "Estudiante",
+    "fecha_creacion": "2023-01-01T00:00:00.000Z"
+
 }
 ```
 
@@ -88,7 +98,7 @@ POST/usuarios
 
 Content-Type: application/json
 {
-  "id_usuario": 8,
+  "id_usuario": 7,
 "nombre": "Jose García",
 "email": "JJJ.garcia@outlook.com",
 "contraseña": "Joseeq123",
@@ -100,8 +110,13 @@ Content-Type: application/json
 ## Respuesta Exitosa (Código 200 OK)
 ```json
 {
-    "status": 201,
-    "message": "Created"
+    "id_usuario": 7,
+    "nombre": "Jose García",
+    "email": "JJJ.garcia@outlook.com",
+    "contraseña": "Joseeq123",
+    "tipo_usuario": "Estudiante",
+    "fecha_creacion": "2023-01-01T00:00:00.000Z"
+
 }
 ```
 
