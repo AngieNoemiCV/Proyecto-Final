@@ -1,3 +1,5 @@
+const cors = require('cors');
+
 const express = require('express');
 const app = express();
 const puerto = 80;
@@ -8,6 +10,7 @@ const RespuestasController = require('./controllers/RespuestasController');
 const PublicacionesController = require('./controllers/PublicacionesController');
 const UsuariosController = require('./controllers/UsuariosController');
 
+app.use(cors());
 app.use(express.json());
 
 app.get('/', function (req, res) {

@@ -1,10 +1,12 @@
 CREATE DATABASE IF NOT EXISTS DesafiosMate;
 
+use DesafiosMate
+
 CREATE TABLE Usuarios (
     id_usuario      INTEGER         NOT NULL AUTO_INCREMENT,
     nombre          VARCHAR(225)    NOT NULL,
     email           VARCHAR(225)    NOT NULL,
-    contraseña      VARCHAR(225)    NOT NULL,
+    contrasena      VARCHAR(225)    NOT NULL,
     tipo_usuario    VARCHAR(225)    NOT NULL,
     fecha_creacion  DATE            NOT NULL,
     PRIMARY KEY     (id_usuario)
@@ -18,6 +20,17 @@ CREATE TABLE desafios (
     tema            VARCHAR(225)    NOT NULL,
     imagen          VARCHAR(225)    NOT NULL,
     PRIMARY KEY     (id_desafio)
+);
+
+CREATE TABLE foros (
+    id_foro         INTEGER         NOT NULL AUTO_INCREMENT,
+    nivel           INTEGER         NOT NULL,
+    tema            VARCHAR(225)    NOT NULL,
+    desafio         VARCHAR(225)    NOT NULL,
+    descripcion     TEXT            NOT NULL,
+    fecha_creacion  DATE            NOT NULL,
+    nombre_usuario  VARCHAR(225)    NOT NULL,
+    PRIMARY KEY     (id_foro)
 );
 
 CREATE TABLE temas (
@@ -41,13 +54,7 @@ CREATE TABLE respuestas_usuario_des (
     FOREIGN KEY     (usuario_id)    REFERENCES Usuarios(id_usuario)
 );
 
-CREATE TABLE foros (
-    id_foro         INTEGER         NOT NULL AUTO_INCREMENT,
-    descripcion     VARCHAR(225)    NOT NULL,
-    titulo          VARCHAR(225)    NOT NULL,
-    fecha_creacion  DATE            NOT NULL,
-    PRIMARY KEY     (id_foro)
-);
+
 
 CREATE TABLE publicaciones (
     id_publicacion  INTEGER         NOT NULL AUTO_INCREMENT,

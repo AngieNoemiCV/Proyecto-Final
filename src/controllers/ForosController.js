@@ -18,10 +18,11 @@ class ForosController {
        
         try {
 
+            console.log(req.body);
             let data = await ForosModel.agregar(req.body)
             data = await ForosModel.consultarPorId(data[0]);
             if (data.length == 0){
-                res.status(404).send({code: 404, message:'not found'});
+                res.status(404).send({code: 404, message:'erroro al obtener'});
             }
             res.send(data[0]);
         } catch (error) {
