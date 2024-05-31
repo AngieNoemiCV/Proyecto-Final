@@ -13,11 +13,20 @@ const UsuariosController = require('./controllers/UsuariosController');
 app.use(cors());
 app.use(express.json());
 
-app.get('/', function (req, res) {
+const corsOptions = {
+    origin: 'http://localhost:3000', // o cualquier otro origen que desees permitir
+    methods: ['GET', 'POST', 'PUT', 'PATCH'], // Métodos permitidos
+    allowedHeaders: ['Content-Type'] // Encabezados permitidos
+  };
+  
+  app.use(cors(corsOptions));
+  
+
+/*app.get('/', function (req, res) {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
     res.send('¡Prueba 123456789012!');
-});
+});*/
 
 app.get('/temas', TemasController.indexGet);
 app.get('/temas/:id([0-9]+)', TemasController.itemGet);
